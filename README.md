@@ -45,4 +45,14 @@ C:.
 └───Folder3
 ```
 
- 
+<h3>Use variable from string</h3>
+
+```powershell
+$message = 'Hello, $Name!' 
+$name = 'Kevin Marquette' 
+$string = $ExecutionContext.InvokeCommand.ExpandString($message)
+Write-Host $string
+
+Hello, Kevin Marquette!
+
+```
